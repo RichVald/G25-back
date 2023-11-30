@@ -41,7 +41,7 @@ const deleteTareas =asyncHandler(async (req, res) => {
 
     await Tarea.deleteOne(tarea)
 
-    res.status(201).json({ id: tarea.id })
+    res.status(200).json({ id: req.params.id })
 })
 
 module.exports = {
